@@ -36,7 +36,7 @@ charToAdd: function(){
 
 let alphaCharLower='abcdefghiklmnopqrstuvwxyz'
 let alphaCharUpper='ABCDEFGHIJKLMNOPQRSTUVWXTZ'
-let numberList= '012345678'
+let numberList= "123456789"
 let specialChar= '!#$%&()*+,-./:;<=>?@[]^_{|}~'
 
 
