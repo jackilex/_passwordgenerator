@@ -36,7 +36,7 @@ charToAdd: function(){
 
 let alphaCharLower='abcdefghiklmnopqrstuvwxyz'
 let alphaCharUpper='ABCDEFGHIJKLMNOPQRSTUVWXTZ'
-let numberList= "123456789"
+let numberList= '0123456789'
 let specialChar= '!#$%&()*+,-./:;<=>?@[]^_{|}~'
 
 
@@ -48,6 +48,11 @@ const randomSelection=function (input){
     let rnum= Math.floor(Math.random() * alphaCharLower.length); 
     return emptyArr[0].push(input= input[rnum]);       
 };
+const ranNumSelection=function (input){    
+    let rnum= Math.floor(Math.random() * 10); 
+    return emptyArr[0].push(input= input[rnum]);       
+};
+
 const addMoreToString= function(){
     let alphaOCharLower='abcdefghiklmnopqrstuvwxyz'
     for (let i= moreIndex; i > 0; i--){
@@ -70,7 +75,7 @@ let writePassword= function(){
         let aUpperOut= randomSelection(alphaCharUpper);
         };
     if (numericChar.checked == true ){
-        let numericOut= randomSelection(numberList);
+        let numericOut= ranNumSelection(numberList);
         };
     if (specialCharEvt.checked == true ){
         let specialOut= randomSelection(specialChar);
