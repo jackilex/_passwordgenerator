@@ -1,13 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-
-
 var emptyArr=[[]];
 var emptyArr2=[];
-
-
-
 //add events target
 
 let passLength= document.getElementById('quantity');
@@ -39,10 +33,6 @@ let alphaCharUpper='ABCDEFGHIJKLMNOPQRSTUVWXTZ'
 let numberList= '0123456789'
 let specialChar= '!#$%&()*+,-./:;<=>?@[]^_{|}~'
 
-
-
-
-
 // set functions and output variables
 const randomSelection=function (input){    
     let rnum= Math.floor(Math.random() * alphaCharLower.length); 
@@ -59,9 +49,7 @@ const addMoreToString= function(){
         let rNum= Math.floor(Math.random() * alphaOCharLower.length);
         emptyArr2.push(alphaOCharLower[rNum]);
     };
-}
-
-       
+}      
 
 let writePassword= function(){
   if(passLength.value == 0){
@@ -85,13 +73,9 @@ let writePassword= function(){
     // let newArrTwo= emptyArr2.join("");      
 };
 }
-
 const clear= function (){
     location.reload(true);
 }
-
-
-
 generateBtn.addEventListener("click", function generateIt(){
     writePassword();   
     let newArr= emptyArr[0].join("") + emptyArr2.join("") ;
@@ -104,7 +88,5 @@ passLength.addEventListener("click", function show(){
     box.style.visibility='visible';
 })
 passLength.addEventListener("click", numIndex.charToAdd)
-
-
 
 clearButton.addEventListener('click',clear)
